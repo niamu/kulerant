@@ -63,6 +63,22 @@ user=> (-> theme kulerant/color (get 0))
 "#F7EDB7"
 ```
 
+## Design Examples
+
+The following are examples of what `kulerant` can do when applied to CSS.
+
+[Living room colors](https://color.adobe.com/Living-room-colors-color-theme-5822057/)
+
+![Heroi.cc - Living room colors](https://raw.githubusercontent.com/niamu/kulerant/master/resources/samples/hecoicc-sample5822057.png)
+
+[Saltillo](https://color.adobe.com/Saltillo-color-theme-1747003/)
+
+![Heroi.cc - Saltillo](https://raw.githubusercontent.com/niamu/kulerant/master/resources/samples/heroicc-sample1747003.png)
+
+[Crying in the Rain](https://color.adobe.com/Crying-in-the-Rain-color-theme-1344922/)
+
+![Heroi.cc - Crying in the Rain](https://raw.githubusercontent.com/niamu/kulerant/master/resources/samples/heroicc-sample1344922.png)
+
 ## License
 
 Copyright © 2016 Brendon Walsh

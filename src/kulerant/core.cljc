@@ -2,7 +2,7 @@
   (:require [kulerant.colors :refer [colors]]
             [garden.color :refer [as-rgb]]
             [clojure.string :as string]
-            #?@(:clj [[clj-http.client :as http]
+            #?@(:clj [[org.httpkit.client :as http]
                       [clojure.data.json :as json]])))
 
 (defn- pow [x n]
@@ -112,6 +112,7 @@
       (fn [url api & [params]]
         (-> (http/get url {:headers {"x-api-key" api}
                            :query-params params})
+            deref
             :body
             (json/read-str :key-fn keyword))))))
 
