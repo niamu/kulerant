@@ -30,10 +30,10 @@
                   (let [x-avg (- x avg)]
                     (* x-avg x-avg)))
         total (count coll)]
-    (-> (/ (apply + squares)
-           (- total 1))
-        #?(:clj (Math/sqrt)
-           :cljs (.sqrt js/Math)))))
+    (->> (/ (apply + squares)
+            (- total 1))
+         #?(:clj (Math/sqrt)
+            :cljs (.sqrt js/Math)))))
 
 (defn- rgb
   "Return the RGB values of a given color"
@@ -106,15 +106,14 @@
 
 
 #?(:clj
-   (def ^:private request
+   (defn- request
      "HTTP Request to Adobe Color's API and return parsed JSON results"
-     (memoize
-      (fn [url api & [params]]
-        (-> (http/get url {:headers {"x-api-key" api}
-                           :query-params params})
-            deref
-            :body
-            (json/read-str :key-fn keyword))))))
+     [url api & [params]]
+     (-> (http/get url {:headers {"x-api-key" api}
+                        :query-params params})
+         deref
+         :body
+         (json/read-str :key-fn keyword))))
 
 #?(:clj
    (defn theme->map

@@ -24,7 +24,7 @@ This works well for my personal preferences in aesthetics. In time, perhaps Kule
 Add the following dependency to your `project.clj` file:
 
 ```Clojure
-[kulerant "0.1.0"]
+[kulerant "0.1.1"]
 ```
 
 ```Clojure

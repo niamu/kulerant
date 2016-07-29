@@ -1,4 +1,4 @@
-(defproject kulerant "0.1.0"
+(defproject kulerant "0.1.1"
   :description "Algorithms for sorting Adobe Color CC (Kuler) theme swatches"
   :url "http://github.com/niamu/kulerant"
   :license {:name "Eclipse Public License"
