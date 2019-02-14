@@ -1,6 +1,7 @@
 (ns kulerant.core
   (:require [kulerant.colors :refer [colors]]
             [garden.color :refer [as-rgb]]
+            [clojure.pprint :as pprint]
             [clojure.string :as string]
             #?@(:clj [[org.httpkit.client :as http]
                       [clojure.data.json :as json]])))
@@ -155,3 +156,8 @@
                              :metadata "all"}))
           (map :id)
           (themes->map api))))
+
+#?(:clj
+   (defn -main
+     [api theme & args]
+     (pprint/pprint (theme->map api theme))))
